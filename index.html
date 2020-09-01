@@ -29,7 +29,7 @@
         <a-scene
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
-            arjs='sourceType: webcam; debugUIEnabled: false;'
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"'
             id="scene"
             embedded
             gesture-detector
@@ -46,19 +46,13 @@
                     autoplay
                     playsinline
                 ></video>
-            </a-assets>
-
-            <a-marker
-                type="nft"
-                url="<assets/icon toast>"
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance=".01"
-                smoothThreshold="5"
-		raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"      
+										   
+                <a-nft
+                    type="nft"
+                    url="<assets/icon toast>"
+                    smooth="true"
+                    smoothTolerance=".01"
+                    smoothThreshold="5"
             >
                 <a-video
                     src="#vid"
@@ -69,7 +63,7 @@
                     class="clickable"
                     gesture-handler
                 ></a-video>
-            </a-marker>
+            </a-nft>
 
             <a-entity camera></a-entity>
         </a-scene>
