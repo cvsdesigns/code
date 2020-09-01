@@ -13,13 +13,11 @@
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-			    this.vid.unmute();
                         this.vid.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
-			    this.vid.mute();
                         this.vid.pause();
                     }.bind(this));
                 },
@@ -57,7 +55,7 @@
                 <a-video
                     src="#vid"
                     scale="15 15 15"
-                    position="0 0 0"
+                    position="0 1 0"
                     rotation="-90 0 0"
                     volume="80"
                     class="clickable"
